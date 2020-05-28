@@ -27,15 +27,17 @@ products = [
 
 #print(products)
 
-products_count = len(products)
-print(type(products))
-print("----------------")
-print("THERE ARE " + str(products_count) + " PRODUCTS")
-print("----------------")
+#Products Part 1
 
-def sort_by_name(any_product):
-    return any_product["name"]
-sorted_products = sorted(products,key=sort_by_name)
+##products_count = len(products)
+##print(type(products))
+##print("----------------")
+##print("THERE ARE " + str(products_count) + " PRODUCTS")
+##print("----------------")
+
+##def sort_by_name(any_product):
+  ##  return any_product["name"]
+##sorted_products = sorted(products,key=sort_by_name)
 
  #{"id":1, 
  #"name": # "Chocolate Sandwich Cookies", 
@@ -44,17 +46,33 @@ sorted_products = sorted(products,key=sort_by_name)
  # "price": 3.50}
 
 
-for product_name in sorted_products:
-    #print(type(product_name))
-    #print(product_name["name"])
-    #print(" + " + product_name["name"] + "(4.99)")
-    price_usd = product_name["price"] #"4.99"
-    price_usd = '${0:.2f}'.format(product_name["price"])
-    print(" + " + product_name["name"] + " (" + str(price_usd) + ")")
+##for product_name in sorted_products:
+    ##print(type(product_name))
+   ##print(product_name["name"])
+    ##print(" + " + product_name["name"] + "(4.99)")
+   ## price_usd = product_name["price"] #"4.99"
+   ## price_usd = '${0:.2f}'.format(product_name["price"])
+   ## print(" + " + product_name["name"] + " (" + str(price_usd) + ")")
+
+#Products part 2 
+
+departments = []
+for p in products:
+    #print(p["department"])
+    #departments.append(p["department"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
+
+department_count = len(departments)
+#print(type(department))
 
 
+print("----------------")
+print("THERE ARE " + str(department_count) + " Departments:")
+print("----------------")
 
-
+for d in departments:
+    print(d)
 
 
 # pprint(products)
