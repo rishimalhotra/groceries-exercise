@@ -1,8 +1,4 @@
-# groceries-exercise
-
-
-# /Users/Rishi/Documents/GitHub/groceries-exercise
-# # groceries.py
+# groceries.py
 
 #from pprint import pprint
 
@@ -33,6 +29,3 @@ print(products)
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
-
-# conda create -n groceries-env python=3.7 # (first time only)
-# conda activate groceries-env
