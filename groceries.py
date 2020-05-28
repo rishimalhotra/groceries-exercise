@@ -29,15 +29,15 @@ products = [
 
 #Products Part 1
 
-##products_count = len(products)
-##print(type(products))
-##print("----------------")
-##print("THERE ARE " + str(products_count) + " PRODUCTS")
-##print("----------------")
+products_count = len(products)
+print(type(products))
+print("----------------")
+print("THERE ARE " + str(products_count) + " PRODUCTS")
+print("----------------")
 
-##def sort_by_name(any_product):
-  ##  return any_product["name"]
-##sorted_products = sorted(products,key=sort_by_name)
+def sort_by_name(any_product):
+    return any_product["name"]
+sorted_products = sorted(products,key=sort_by_name)
 
  #{"id":1, 
  #"name": # "Chocolate Sandwich Cookies", 
@@ -46,13 +46,13 @@ products = [
  # "price": 3.50}
 
 
-##for product_name in sorted_products:
-    ##print(type(product_name))
-   ##print(product_name["name"])
-    ##print(" + " + product_name["name"] + "(4.99)")
-   ## price_usd = product_name["price"] #"4.99"
-   ## price_usd = '${0:.2f}'.format(product_name["price"])
-   ## print(" + " + product_name["name"] + " (" + str(price_usd) + ")")
+for product_name in sorted_products:
+    #print(type(product_name))
+    #print(product_name["name"])
+    #print(" + " + product_name["name"]
+    #price_usd = product_name["price"] # "4.99"
+    price_usd = '${0:.2f}'.format(product_name["price"])
+    print(" + " + product_name["name"] + " (" + str(price_usd) + ")")
 
 #Products part 2 
 
@@ -78,7 +78,11 @@ unique_departments.sort()
 for d in unique_departments:
     matching_products = [p for p in products if p["department"] == d]
     matching_products_count = len(matching_products)
-    print(d.title() + " (" + str(matching_products_count) + " products)")
+    if matching_products_count > 1:
+        label = "products"
+    else:
+        label = "product"
+    print(" + " + d.title() + " (" + str(matching_products_count) + " " + label + ")")
 
 
 # pprint(products)
