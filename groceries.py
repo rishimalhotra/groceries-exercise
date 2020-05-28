@@ -25,6 +25,14 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+# loop through the products and print each one
+#for x in products:
+    #price_usd = x["price"] "($4.25)"
+    #print
+    ## a = 10
+    #message = str("The number is") + "a"
+    #message2 = f"The number is {a}""
+
 #print(products)
 
 #Products Part 1
@@ -76,7 +84,7 @@ print("----------------")
 unique_departments.sort()
 
 for d in unique_departments:
-    matching_products = [p for p in products if p["department"] == d]
+    matching_products = [p for p in products if p["department"] == d] #list comprehension approach, complicated thing
     matching_products_count = len(matching_products)
     if matching_products_count > 1:
         label = "products"
