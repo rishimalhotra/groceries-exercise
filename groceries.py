@@ -84,7 +84,7 @@ print("----------------")
 unique_departments.sort()
 
 for d in unique_departments:
-    matching_products = [p for p in products if p["department"] == d] #list comprehension approach, complicated thing
+    matching_products = [p for p in products if p["department"] == d] #list comprehension approach, complicated thing. 
     matching_products_count = len(matching_products)
     if matching_products_count > 1:
         label = "products"
