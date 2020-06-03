@@ -3,7 +3,7 @@
 import csv
 # todo: assemble a new products variable by reading from CSV file
 products = []
-csv_filepath = "products.csv" # a relative filepath
+csv_filepath = "/Users/Rishi/Documents/GitHub/groceries-exercise/products.csv" # a relative filepath
 with open(csv_filepath, "r") as csv_file: # "r" means "open the file for reading"
     reader = csv.DictReader(csv_file) # assuming your CSV has headers
     for row in reader:
